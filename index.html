@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Café Aroma | Cafeteria Artesanal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#localizacao">Localização</a>
+  </nav>
+
+  <header>
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="Aroma_Cafeteria.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+
+  <div class="header-content">
+    <h1>Bem-vindo ao Café Aroma</h1>
+    <button onclick="document.getElementById('cardapio').scrollIntoView()">Ver Cardápio</button>
+  </div>
+</header>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>
+      O Café Aroma é um espaço acolhedor no coração da cidade, especializado em cafés artesanais, bolos caseiros e bons momentos. Valorizamos produtores locais e qualidade em cada detalhe.
+    </p>
+  </section>
+
+  <section id="cardapio" class="cardapio">
+    <h2>Nosso Cardápio</h2>
+    <p>
+      Escolha entre expressos, cappuccinos, cafés gelados, pães de queijo, croissants e mais.
+    </p>
+    <button onclick="abrirModal()">Ver Menu Completo</button>
+  </section>
+
+ <section id="galeria">
+  <h2>Galeria</h2>
+  <div class="carrossel-container">
+    <button class="carrossel-btn left" onclick="moverCarrossel(-1)">❮</button>
+    <div class="carrossel">
+      <div class="carrossel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1200px-A_small_cup_of_coffee.JPG" alt="Café 1"></div>
+      <div class="carrossel-item"><img src="https://baggiocafe.com.br/cdn/shop/articles/Tipos_de_graos_de_cafe_1.jpg?crop=center&height=1200&v=1708516699&width=1200" alt="Café 2"></div>
+      <div class="carrossel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfBTDSKMBIrYYDkpcRyW3dKQBptlJgvO_uCQ&s" alt="Café 3"></div>
+      <div class="carrossel-item"><img src="https://s2-g1.glbimg.com/fx4Nc922ML21wZt4OJEpOwebGJc=/0x0:5472x3648/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/J/M/4BuyG2TBCBMUukXAA0cg/adobestock-229640991.jpeg" alt="Café 4"></div>
+      <div class="carrossel-item"><img src="https://www.sabornamesa.com.br/media/k2/items/cache/8097da6161421504ad99a7e5f09e9e69_XL.jpg" alt="Café 5"></div>
+      <div class="carrossel-item"><img src="https://storage.googleapis.com/imagens_videos_gou_cooking_prod/production/mesas/2019/08/d0038ae1-bolo-de-rolo-tm-doces-brasileiros-mariana-dias-6350-baixa-2.jpg" alt="Café 6"></div>
+      <div class="carrossel-item"><img src="https://loja.mueller.ind.br/media/wysiwyg/pao-caseiro-facil1.jpg" alt="Café 7"></div>
+      <div class="carrossel-item"><img src="https://i.ytimg.com/vi/RjILUVqV90c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC2oO1vHu4uH1VnNAmgCEubElGhCQ" alt="Café 8"></div>
+      <div class="carrossel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO6VqWHp861i-BLyScRylrsInoUKK6AyfzlQ&s" alt="Café 9"></div>
+    </div>
+    <button class="carrossel-btn right" onclick="moverCarrossel(1)">❯</button>
+  </div>
+</section>
+
+
+
+  <section id="localizacao" class="localizacao">
+  <h2>Onde Estamos</h2>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4320643790117!2d-46.64100528452572!3d-23.58802546858127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59cfcce45267%3A0x38dca493de31e2c!2sRua%20Áurea%2C%20Vila%20Mariana%2C%20São%20Paulo%20-%20SP%2C%2004015-070!5e0!3m2!1spt-BR!2sbr!4v1717524575349!5m2!1spt-BR!2sbr"
+    width="100%"
+    height="300"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+  <footer>
+    <p>© 2025 Café Aroma - Todos os direitos reservados</p>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/5599999999999" target="_blank" title="Fale conosco no WhatsApp">📱</a>
+
+  <!-- Modal -->
+  <div class="modal" id="modalCardapio">
+    <div class="modal-content">
+      <h3>Menu Completo</h3>
+      <ul>
+        <li>☕ Espresso - R$ 6,00</li>
+        <li>🍫 Mocha - R$ 10,00</li>
+        <li>🥐 Croissant de Chocolate - R$ 8,00</li>
+        <li>🧀 Pão de Queijo - R$ 5,00</li>
+        <li>🍰 Bolo do Dia - R$ 9,00</li>
+      </ul>
+      <button class="close" onclick="fecharModal()">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
